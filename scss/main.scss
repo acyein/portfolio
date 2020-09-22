@@ -1,0 +1,122 @@
+@import 'config';
+@import 'utilities';
+
+// General
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    // font-family: 'Arimo', sans-serif;
+    // font-family: 'Barlow', sans-serif;
+    font-family: 'Dosis', sans-serif;
+    // font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: $dark-color;
+}
+
+ul {
+    list-style: none;
+}
+
+h2, h3, h4 {
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+}
+
+// Logo
+#logo {
+    width: 10rem;
+    color: #222;
+    text-transform: uppercase;
+}
+
+// Main nav
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.6rem 0;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        padding: 1.6rem 2.4rem;
+    }
+
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        border-bottom: 3px solid transparent;
+        padding-bottom: .8rem;
+        transition: border-color .5s;
+
+        &:hover {
+            border-color: $medium-color;
+        }
+
+        &.current {
+            border-color: $main-color;
+        }
+    }
+}
+
+
+// Header
+#header {
+    &-home {
+        position: relative;
+        background-color: teal;
+        color: #fff;
+        height: 100vh;
+        
+        &::before {
+            content: '';
+            background: $bg-image no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.6;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content {
+            text-align: center;
+            padding-top: 10%;
+
+            h1 {
+                font-size: 6rem;
+                line-height: 1.2;
+            }
+
+            span {
+                color: $dark-color;
+            }
+        }
+    }
+    
+    // &-inner {
+
+    // }
+}
