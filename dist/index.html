@@ -14,16 +14,16 @@
     <!-- Header -->
     <header id="header">
         <div class="container position-relative d-flex justify-content-center">
-            <div id="navbar" class="fixed-top">
-                <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center">
+            <div id="navbar" class="fixed-top py-2">
+                <div class="container d-flex justify-content-between align-items-center">
                     <div id="brand">
-                        <a href="index.html#header"><img src="img/logo.png" alt="Brand logo" id="logo" class="pt-3 pt-sm-0"></a>
+                        <a href="index.html#header"><img src="img/logo.png" alt="Brand logo" id="logo"></a>
                     </div>
     
                     <nav class="nav d-flex justify-content-center">
-                        <a class="nav-link px-0 py-2 mx-0 mx-3 mx-sm-4" href="index.html#about">About</a>
-                        <a class="nav-link px-0 py-2 mx-0 mx-3 mx-sm-4" href="index.html#projects">Projects</a>
-                        <a class="nav-link px-0 py-2 mx-0 mx-3 mx-sm-4" href="index.html#contact">Contact</a>
+                        <a class="nav-link px-0 mx-2 mx-sm-4" href="index.html#about">About</a>
+                        <a class="nav-link px-0 mx-2 mx-sm-4" href="index.html#projects">Projects</a>
+                        <a class="nav-link px-0 mx-2 mx-sm-4" href="index.html#contact">Contact</a>
                     </nav>
                 </div>
             </div>
@@ -63,7 +63,8 @@
                             <div class="dot"></div>
                             <p class="lead">Familiar with</p>
                         </div>
-                        <ul class="col-6">
+                        
+                        <ul class="col-sm col-md-6">
                             <li class="py-2"><i class="fab fa-html5 fa-2x"></i>HTML 5</li>
                             <li class="py-2"><i class="fab fa-css3-alt fa-2x"></i>CSS 3</li>
                             <li class="py-2"><i class="fab fa-sass fa-2x"></i>Sass</li>
@@ -71,7 +72,7 @@
                             <li class="py-2"><i class="fab fa-js-square fa-2x"></i>JavaScript</li>
                         </ul>
                         
-                        <ul class="col-6">
+                        <ul class="col-sm col-md-6">
                             <li class="py-2"><i class="fab fa-node fa-2x"></i>Node.js</li>
                             <li class="py-2"><img src="img/icons/express.png" alt="ExpressJs icon">Express.js</li>
                             <li class="py-2"><img src="img/icons/mongodb.png" alt="MongoDB icon">MongoDB</li>
@@ -99,7 +100,7 @@
                         <p class="lead">Check out my recent projects</p>
                     </div>
                     <div id="project-info">
-                        <div class="shadow my-5 px-0">
+                        <div class="shadow mt-3 mb-5 px-0">
                             <img src="img/projects/yelp-camp.png" alt="Yelp Camp website">
                         </div>
                         <div class="shadow my-5 px-0">
@@ -138,11 +139,6 @@
                 <div class="section-heading col-lg-3 mb-4">
                     <h2>Contact</h2>
                     <div class="bottom-line"></div>
-                    <!-- <div class="socials mt-5">
-                        <a class="link mx-2" href="mailto:chianyein@gmail.com" target="_blank"><i class="fas fa-envelope fa-2x"></i></a>
-                        <a class="link mx-2" href="https://www.linkedin.com/in/angchianyein" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
-                        <a class="link mx-2" href="https://github.com/acyein" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                    </div> -->
                 </div>
                 
                 <div class="section-content col">
@@ -152,9 +148,9 @@
                             <p class="lead">Let's connect!</p>
                         </div>
                         <div class="socials d-flex align-items-center justify-content-sm-end col-sm-3 mb-3 mb-sm-0">
-                            <a class="link mx-2" href="mailto:chianyein@gmail.com" target="_blank"><i class="fas fa-envelope fa-2x"></i></a>
-                            <a class="link mx-2" href="https://www.linkedin.com/in/angchianyein" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
-                            <a class="link mx-2" href="https://github.com/acyein" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                            <a class="social-link mx-2" href="mailto:chianyein@gmail.com" target="_blank"><i class="fas fa-envelope fa-2x"></i></a>
+                            <a class="social-link mx-2" href="https://www.linkedin.com/in/angchianyein" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                            <a class="social-link mx-2" href="https://github.com/acyein" target="_blank"><i class="fab fa-github fa-2x"></i></a>
                         </div>
                         <p class="col">I am currently based in Bandar Seri Begawan, Brunei. If you are keen to work together, hit me up on my socials or submit the form below.</p>
                     </div>
@@ -193,9 +189,9 @@
         </div>
     </section>
 
-    <footer class="mt-auto py-4">
+    <footer class="mt-auto py-3">
         <div class="container text-center">
-            <span class="text-muted">Copyright &copy; 2020 <a class="link" href="index.html">Ang Chian Yein</a> &bull; All Rights Reserved</span>
+            <span class="text-light">Copyright &copy; 2020 <a href="index.html#header">Ang Chian Yein</a> &bull; All Rights Reserved</span>
         </div>
     </footer>
     
@@ -211,8 +207,8 @@
         // Change navbar background on scroll
         $(document).ready(() => {
             $(document).scroll(() => {
-                const $nav = $('#navbar');
-                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                const width = $(window).width();
+                $('#navbar').toggleClass('scrolled', $(this).scrollTop() > $('#navbar').height());
             });
         });
 

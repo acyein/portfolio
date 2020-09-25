@@ -1,15 +1,3 @@
-// Tablets & smaller
-@media (max-width: 800px) {
-    #header {
-        height: 30rem;
-
-        .header-content {
-            width: 100%;
-            height: 30rem !important;
-        }
-    }
-}
-
 // Smartphones
 @media (max-width: 500px) {
     .bottom-line {
@@ -17,23 +5,20 @@
         margin-right: auto;
     }
 
+    body {
+        font-size: 5vmin;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+    }
+
     h2 {
         text-align: center;
     }
 
-    // --- Header ---
-    #header {
-        height: 10rem;
-        background-position: center top;
-
-        .scrolled {
-            height: 10rem;
-
-        }
-        
-        .header-content {
-            display: none !important;
-        }
+    .section-content > .content-heading > * {
+        display: none;
     }
 
     // --- Footer ---
@@ -49,7 +34,4 @@
     h1 {
         font-size: 3.8rem;
     }
-}
-
-@media (max-height: 330px) {
 }
