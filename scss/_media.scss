@@ -1,0 +1,55 @@
+// Tablets & smaller
+@media (max-width: 800px) {
+    #header {
+        height: 30rem;
+
+        .header-content {
+            width: 100%;
+            height: 30rem !important;
+        }
+    }
+}
+
+// Smartphones
+@media (max-width: 500px) {
+    .bottom-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    // --- Header ---
+    #header {
+        height: 10rem;
+        background-position: center top;
+
+        .scrolled {
+            height: 10rem;
+
+        }
+        
+        .header-content {
+            display: none !important;
+        }
+    }
+
+    // --- Footer ---
+    footer {
+        .container {
+            font-size: .8rem;
+        }
+    }
+}
+
+// Landscape
+@media (max-height: 580px) {
+    h1 {
+        font-size: 3.8rem;
+    }
+}
+
+@media (max-height: 330px) {
+}

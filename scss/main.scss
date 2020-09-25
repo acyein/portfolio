@@ -1,122 +1,150 @@
-@import 'config';
-@import 'utilities';
+$main-color: #00b4d8;
+$light-color: #f4f4f4;
+$dark-color: #222;
+$main-bg-image: url('../img/hero.jpg');
+$texture-bg-image: url('../img/white-waves.png');
 
-// General
-* {
-    margin: 0;
-    padding: 0;
+.lead {
+    font-size: 2rem;
+    margin: .5rem 0 1.5rem;
 }
 
-html {
-    font-size: 62.5%;
+.link {
+    color: $dark-color;
+    color: inherit;
+    font-size: inherit;
+
+    &:hover, &:active {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
+.bottom-line {
+    width: 4rem;
+    margin-top: .8rem;
+    border: 2px solid $main-color;
+    background: $main-color;
+}
+
+.dot {
+    width: .7rem;
+    height: .7rem;
+    border: 2px solid $main-color;
+    border-radius: 50%;
+    background: $main-color;
+    margin: 0 .8rem .6rem 0;
+}
+
+// --- General ---
 body {
-    // font-family: 'Arimo', sans-serif;
-    // font-family: 'Barlow', sans-serif;
-    font-family: 'Dosis', sans-serif;
-    // font-family: 'Raleway', sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.6;
-    background: #fff;
-}
-
-a {
-    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    background: $texture-bg-image repeat;
     color: $dark-color;
 }
 
-ul {
-    list-style: none;
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
-h2, h3, h4 {
-    text-transform: uppercase;
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+p, a, li, label {
+    font-size: 1.2rem;
 }
 
 img {
     width: 100%;
 }
 
-// Logo
-#logo {
-    width: 10rem;
-    color: #222;
-    text-transform: uppercase;
+ul {
+    margin: 0;
+    padding: 0;
 }
 
-// Main nav
-#main-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.6rem 0;
-
-    ul {
-        display: flex;
-    }
-
-    li {
-        padding: 1.6rem 2.4rem;
-    }
-
-    a {
-        color: #fff;
-        text-transform: uppercase;
-        border-bottom: 3px solid transparent;
-        padding-bottom: .8rem;
-        transition: border-color .5s;
-
-        &:hover {
-            border-color: $medium-color;
-        }
-
-        &.current {
-            border-color: $main-color;
-        }
-    }
+li {
+    list-style: none;
 }
 
-
-// Header
+// --- Header ---
 #header {
-    &-home {
-        position: relative;
-        background-color: teal;
-        color: #fff;
-        height: 100vh;
-        
-        &::before {
-            content: '';
-            background: $bg-image no-repeat center center/cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.6;
+    background: $main-bg-image no-repeat center center / cover;
+    color: $light-color;
+    height: 100vh;
+
+    #navbar {
+        background-color: transparent;
+        z-index: 5;
+
+        &.scrolled {
+            background-color: #222222cc;
+            transition: background-color .2s ease-in-out;
         }
 
-        .container {
-            position: relative;
-            z-index: 1;
+        #logo {
+            width: 5rem;
+            height: auto;
+            z-index: 4;
         }
 
-        .header-content {
-            text-align: center;
-            padding-top: 10%;
-
-            h1 {
-                font-size: 6rem;
-                line-height: 1.2;
-            }
-
-            span {
-                color: $dark-color;
+        .nav-link {
+            color: $light-color;
+            border-bottom: 2.5px solid transparent;
+            transition: border-color .5s;
+    
+            &:hover {
+                border-color: $light-color;
             }
         }
     }
-    
-    // &-inner {
 
-    // }
+    .header-content {
+        width: 100%;
+        height: 100vh;
+
+        #nickname {
+            &::before {
+                content: '{ ';
+                position: relative;
+                opacity: 0.8;
+                color: $main-color;
+            }
+
+            &::after {
+                content: ' }';
+                position: relative;
+                opacity: 0.8;
+                color: $main-color;
+            }
+        }
+
+        p {
+            font-size: 2rem;
+        }
+    }
 }
+
+// --- About ---
+#about {
+    i, img {
+        width: 2.5rem;
+        margin-right: .8rem;
+        text-align: center;
+    }
+}
+
+// --- Contact ---
+#contact {
+    .socials {
+        color: $main-color;
+    }
+}
+
+@import 'media';
